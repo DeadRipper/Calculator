@@ -8,20 +8,18 @@ namespace calculator
 {
 	class CalcLogic
 	{
-		public CalcLogic()
-		{
-
-		}
+		public CalcLogic() { }
 
 		public ulong Sum(ulong a, ulong b)
 		{
-			return a + b;
+			ulong c = a + b;
+			return c;
 		}
 
-		public ulong Result(ulong a, ulong b)
+		public ulong Raznitsa(ulong a, ulong b)
 		{
-			
-			return a;
+			ulong c = a - b;
+			return c;
 		}
 	}
 }

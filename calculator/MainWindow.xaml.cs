@@ -86,22 +86,44 @@ namespace calculator
 
 		private void Buttonplus_Click(object sender, RoutedEventArgs e)
 		{
-			MainText.Text = "+";
-			if (MainText.Text == "+")
-			{
-				static ulong b = Convert.ToUInt64(MainText.Text);
-			}
-			else
-			{
-				var a = Convert.ToUInt64(MainText.Text);
-			}
-			var res = cl.Sum(a, b);
-			MainText_result.Text = res.ToString();
+			MainText.Text += "+";
 		}
 
 		private void Buttonravno_Click(object sender, RoutedEventArgs e)
 		{
+			foreach (ulong s in MainText.Text)
+			{
+				ulong i = Convert.ToUInt64(MainText.Text);
+				ulong j = Convert.ToUInt64(MainText.Text);
+				if (MainText.Text.Contains("+") || MainText.Text.Contains("-") || MainText.Text.Contains("/") ||
+					MainText.Text.Contains("*"))
+					MainText.Text.Trim();
+				else
+				{
+					i = s;
+					j = s;
+				}
+				for (; ; )
+				{
+					if (MainText.Text.Contains("+"))
+						cl.Sum(i, j);
+					else if (MainText.Text.Contains("-"))
+						cl.Raznitsa(Convert.ToUInt64(MainText.Text), Convert.ToUInt64(MainText.Text));
+					if (MainText.Text.Contains(null))
+						MessageBox.Show("Input data");
+				}
+			}
 
+			//	for (; ;)
+			//	{
+			//		if (MainText.Text.Contains("+"))
+			//			cl.Sum(;
+			//		else if (MainText.Text.Contains("-"))
+			//			cl.Raznitsa(Convert.ToUInt64(MainText.Text), Convert.ToUInt64(MainText.Text));
+			//		if (MainText.Text.Contains(null))
+			//			MessageBox.Show("Input data");
+			//	}
+			//}
 		}
 	}
 }
