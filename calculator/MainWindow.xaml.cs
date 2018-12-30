@@ -92,21 +92,27 @@ namespace calculator
 		private void Buttonravno_Click(object sender, RoutedEventArgs e)
 		{
 			foreach (ulong s in MainText.Text)
-			{
-				ulong i = Convert.ToUInt64(MainText.Text);
-				ulong j = Convert.ToUInt64(MainText.Text);
+			{ 
+
 				if (MainText.Text.Contains("+") || MainText.Text.Contains("-") || MainText.Text.Contains("/") ||
 					MainText.Text.Contains("*"))
-					MainText.Text.Trim();
+				{
+					ulong i = Convert.ToUInt64(MainText.Text);
+					ulong j = Convert.ToUInt64(MainText.Text);
+					MainText.Text.
+				}
 				else
 				{
+					ulong i = Convert.ToUInt64(MainText.Text);
+					ulong j = Convert.ToUInt64(MainText.Text);
 					i = s;
 					j = s;
 				}
+
 				for (; ; )
 				{
 					if (MainText.Text.Contains("+"))
-						cl.Sum(i, j);
+						cl.Sum(a, b);
 					else if (MainText.Text.Contains("-"))
 						cl.Raznitsa(Convert.ToUInt64(MainText.Text), Convert.ToUInt64(MainText.Text));
 					if (MainText.Text.Contains(null))
