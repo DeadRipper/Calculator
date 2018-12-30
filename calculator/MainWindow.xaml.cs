@@ -92,14 +92,23 @@ namespace calculator
 		private void Buttonravno_Click(object sender, RoutedEventArgs e)
 		{
 			foreach (ulong s in MainText.Text)
-			{ 
+			{
+				var plus += buttonplus.Click;
+				switch()
+				{
+					case MainText.Text.Contains("+"):
+
+						MainText_result.Text = result;
+						break;
+				}
+					
 
 				if (MainText.Text.Contains("+") || MainText.Text.Contains("-") || MainText.Text.Contains("/") ||
 					MainText.Text.Contains("*"))
 				{
 					ulong i = Convert.ToUInt64(MainText.Text);
 					ulong j = Convert.ToUInt64(MainText.Text);
-					MainText.Text.
+					
 				}
 				else
 				{
