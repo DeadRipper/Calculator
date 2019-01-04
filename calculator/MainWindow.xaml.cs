@@ -105,16 +105,16 @@ namespace calculator
 		{
 			try
 			{
-				ulong i = Convert.ToUInt64(MainText_0.Text);
-				ulong j = Convert.ToUInt64(MainText_1.Text);
-				for (; ; )
+				double i = Convert.ToDouble(MainText_0.Text);
+				double j = Convert.ToDouble(MainText_1.Text);
+				for (; ;)
 				{
 					if (Operation_textbox.Text.Contains("+"))
 					{						
 						MainText_0.Text = $"{i}" + "+" + $"{j}";
 						MainText_1.Clear();
 						Operation_textbox.Clear();
-						MainText_result.Text = cl.Sum(i, j).ToString();
+						MainText_result.Text += cl.Sum(i, j).ToString();
 						break;
 					}
 					else if (Operation_textbox.Text.Contains("-"))
@@ -122,7 +122,7 @@ namespace calculator
 						MainText_0.Text = $"{i}" + "-" + $"{j}";
 						MainText_1.Clear();
 						Operation_textbox.Clear();
-						MainText_result.Text = cl.Raznitsa(i, j).ToString();
+						MainText_result.Text += cl.Raznitsa(i, j).ToString();
 						break;
 					}
 				}
