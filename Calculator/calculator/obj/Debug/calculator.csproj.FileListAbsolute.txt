@@ -1,0 +1,15 @@
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\bin\Debug\calculator.exe.config
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\bin\Debug\calculator.exe
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\bin\Debug\calculator.pdb
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.csprojAssemblyReference.cache
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\MainWindow.g.cs
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\App.g.cs
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator_MarkupCompile.cache
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator_MarkupCompile.lref
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\MainWindow.baml
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.g.resources
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.Properties.Resources.resources
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.csproj.GenerateResource.cache
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.csproj.CoreCompileInputs.cache
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.exe
+C:\Users\hardy\source\repos\Calculator\Calculator\calculator\obj\Debug\calculator.pdb
