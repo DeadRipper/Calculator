@@ -27,6 +27,20 @@ namespace calculator
 			InitializeComponent();
 		}
 
+		public string Answer
+		{
+			get
+			{
+				return MainText_0.Text;
+			}
+			set
+			{
+				value = default;
+			}
+		}
+
+		public bool Input = false;
+
 		static CalcLogic cl = new CalcLogic();
 
 		private void button1_Click(object sender, RoutedEventArgs e)
@@ -92,6 +106,12 @@ namespace calculator
 			Operation_textbox.Text = buttonplus.Content.ToString();
 			MainText_0.Text = MainText_1.Text;
 			MainText_1.Clear();
+			if(MainText_result.Text.Contains(Answer) && MainText_1.Text.Contains(""))
+			{
+				Operation_textbox.Text = buttonplus.Content.ToString();
+				MainText_0.Text += MainText_result.Text;
+				MainText_1.Clear();
+			}
 		}
 
 		private void Buttonminus_Click(object sender, RoutedEventArgs e)
@@ -105,28 +125,29 @@ namespace calculator
 		{
 			try
 			{
-				double i = Convert.ToDouble(MainText_0.Text);
-				double j = Convert.ToDouble(MainText_1.Text);
 				for (; ;)
 				{
+					double j = Convert.ToDouble(MainText_1.Text);
+					double i = Convert.ToDouble(MainText_0.Text);
+
 					if (Operation_textbox.Text.Contains("+"))
-					{						
-						MainText_0.Text = $"{i}" + "+" + $"{j}";
+					{
+						Answer = $"{i}" + "+" + $"{j}";
 						MainText_1.Clear();
 						Operation_textbox.Clear();
-						MainText_result.Text += cl.Sum(i, j).ToString();
+						MainText_result.Text = cl.Sum(i, j).ToString();
 						break;
 					}
 					else if (Operation_textbox.Text.Contains("-"))
 					{
-						MainText_0.Text = $"{i}" + "-" + $"{j}";
+						Answer = $"{i}" + "-" + $"{j}";
 						MainText_1.Clear();
 						Operation_textbox.Clear();
 						MainText_result.Text += cl.Raznitsa(i, j).ToString();
 						break;
 					}
 				}
-				}
+			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
