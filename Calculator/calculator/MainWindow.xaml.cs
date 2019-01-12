@@ -94,57 +94,69 @@ namespace calculator
 
 		private void Buttonplus_Click(object sender, RoutedEventArgs e)
 		{
+			Double x = 0;
+			Double y = 0;
 			Operation_textbox.Text = buttonplus.Content.ToString();
-			MainText_0.Text = MainText_1.Text;
-			MainText_1.Clear();
-			if(MainText_result.Text.Contains(MainText_result.Text) && MainText_1.Text.Contains(""))
+			if (Double.TryParse(MainText_0.Text, out x) && Double.TryParse(MainText_1.Text, out y))
 			{
-				Operation_textbox.Text = buttonplus.Content.ToString();
-				MainText_0.Text += MainText_result.Text;
+				MainText_0.Text = cl.Sum(x, y).ToString();
 				MainText_1.Clear();
-				MainText_result.Clear();
+			}
+			else
+			{
+				MainText_0.Text = MainText_1.Text;
+				MainText_1.Clear();
 			}
 		}
 
 		private void Buttonumnoj_Click(object sender, RoutedEventArgs e)
 		{
 			Operation_textbox.Text = buttonumnoj.Content.ToString();
-			MainText_0.Text = MainText_1.Text;
-			MainText_1.Clear();
-			if (MainText_result.Text.Contains(MainText_result.Text) && MainText_1.Text.Contains(""))
+			Double x = 0;
+			Double y = 0;
+			if (Double.TryParse(MainText_0.Text, out x) && Double.TryParse(MainText_1.Text, out y))
 			{
-				Operation_textbox.Text = buttonumnoj.Content.ToString();
-				MainText_0.Text += MainText_result.Text;
+				MainText_0.Text = cl.Mult(x, y).ToString();
 				MainText_1.Clear();
-				MainText_result.Clear();
+			}
+			else
+			{
+				MainText_0.Text = MainText_1.Text;
+				MainText_1.Clear();
 			}
 		}
 
 		private void Buttondelit_Click(object sender, RoutedEventArgs e)
 		{
 			Operation_textbox.Text = buttondelit.Content.ToString();
-			MainText_0.Text = MainText_1.Text;
-			MainText_1.Clear();
-			if (MainText_result.Text.Contains(MainText_result.Text) && MainText_1.Text.Contains(""))
+			Double x = 0;
+			Double y = 0;
+			if (Double.TryParse(MainText_0.Text, out x) && Double.TryParse(MainText_1.Text, out y))
 			{
-				Operation_textbox.Text = buttondelit.Content.ToString();
-				MainText_0.Text += MainText_result.Text;
+				MainText_0.Text = cl.Div(x, y).ToString();
 				MainText_1.Clear();
-				MainText_result.Clear();
+			}
+			else
+			{
+				MainText_0.Text = MainText_1.Text;
+				MainText_1.Clear();
 			}
 		}
 
 		private void Buttonminus_Click(object sender, RoutedEventArgs e)
 		{
 			Operation_textbox.Text = buttonminus.Content.ToString();
-			MainText_0.Text = MainText_1.Text;
-			MainText_1.Clear();
-			if (MainText_result.Text.Contains(MainText_result.Text) && MainText_1.Text.Contains(""))
+			Double x = 0;
+			Double y = 0;
+			if (Double.TryParse(MainText_0.Text, out x) && Double.TryParse(MainText_1.Text, out y))
 			{
-				Operation_textbox.Text = buttonminus.Content.ToString();
-				MainText_0.Text += MainText_result.Text;
+				MainText_0.Text = cl.Raznitsa(x, y).ToString();
 				MainText_1.Clear();
-				MainText_result.Clear();
+			}
+			else
+			{
+				MainText_0.Text = MainText_1.Text;
+				MainText_1.Clear();
 			}
 		}
 
@@ -152,8 +164,11 @@ namespace calculator
 		{
 			try
 			{
-				for (; ;)
+				for (; ; )
 				{
+					Double x = 0;
+					Double y = 0;
+
 					double j = Convert.ToDouble(MainText_0.Text);
 					double i = Convert.ToDouble(MainText_1.Text);
 
