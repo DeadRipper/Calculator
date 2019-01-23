@@ -1,0 +1,35 @@
+﻿<Window x:Class="calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="258.667" Width="239.256" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-31" Height="250" VerticalAlignment="Top">
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="82" Margin="7,5,0,0" Stroke="Black" VerticalAlignment="Top" Width="213"/>
+
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="5,92,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button1_Click"/>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Margin="49,92,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button2_Click"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="93,92,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button3_Click"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Margin="5,124,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button4_Click"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="93,124,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button6_Click"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="49,124,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button5_Click"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Margin="7,156,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button7_Click"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Margin="51,156,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button8_Click"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Margin="95,156,0,0" VerticalAlignment="Top" Width="37" Height="27" Click="button9_Click"/>
+        <Button x:Name="buttontochka" Content="," HorizontalAlignment="Left" Margin="7,188,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="Buttontochka_Click"/>
+        <Button x:Name="button0" Content="0" HorizontalAlignment="Left" Margin="51,188,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="button0_Click"/>
+        <Button x:Name="buttonravno" Content="=" HorizontalAlignment="Left" Margin="95,188,0,0" VerticalAlignment="Top" Width="37" Height="27" Click="Buttonravno_Click"/>
+        <Button x:Name="buttondelit" Content="/" HorizontalAlignment="Left" Margin="137,92,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="Buttondelit_Click"/>
+        <Button x:Name="buttonumnoj" Content="*" HorizontalAlignment="Left" Margin="137,124,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="Buttonumnoj_Click"/>
+        <Button x:Name="buttonminus" Content="-" HorizontalAlignment="Left" Margin="139,156,0,0" VerticalAlignment="Top" Width="37" Height="27" Click="Buttonminus_Click"/>
+        <Button x:Name="buttonplus" Content="+" HorizontalAlignment="Left" Margin="139,188,0,0" Width="37" Click="Buttonplus_Click" Height="27" VerticalAlignment="Top"/>
+        <TextBox x:Name="MainText_0" HorizontalAlignment="Left" Height="20" Margin="14,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" Foreground="#FF060606" BorderBrush="White" SelectionBrush="White" Background="White" BorderThickness="0" Cursor="None" />
+        <Button x:Name="button_clear" Content="c" HorizontalAlignment="Left" Margin="181,92,0,0" VerticalAlignment="Top" Width="39" Height="27" Click="Button_clear_Click"/>
+        <TextBox x:Name="MainText_1" HorizontalAlignment="Left" Height="22" Margin="14,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" BorderBrush="White" SelectionBrush="White" Background="White" BorderThickness="0" Cursor="None"/>
+        <TextBox x:Name="MainText_result" HorizontalAlignment="Left" Height="20" Margin="14,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" BorderBrush="White" SelectionBrush="White" Background="White" BorderThickness="0" Cursor="None"/>
+        <TextBox x:Name="Operation_textbox" HorizontalAlignment="Left" Height="23" Margin="181,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" BorderBrush="White" SelectionBrush="White" Background="White" BorderThickness="0" Cursor="None"/>
+
+    </Grid>
+</Window>
